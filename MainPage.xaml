@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SfDataGridSample"
+             x:Class="SfDataGridSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:MainViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+
+
+    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <CheckBox Grid.Row="0"
+                  Grid.Column="0"
+                  IsChecked="{Binding CheckBox1}" />
+        <CheckBox Grid.Row="0"
+                  Grid.Column="1"
+                  IsChecked="{Binding CheckBox2}"
+                  IsEnabled="{Binding CheckBox2Enabled}" />
+        <CheckBox Grid.Row="0"
+                  Grid.Column="2"
+                  IsChecked="{Binding CheckBox3}"
+                  IsEnabled="{Binding CheckBox3Enabled}" />
+    </Grid>
+
+</ContentPage>
